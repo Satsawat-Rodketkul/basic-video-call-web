@@ -1,0 +1,21 @@
+<div class="register-container">
+    <div class="register-image">
+        <img src="/assets/images/register-form.jpg"  alt="purple-image">
+    </div>
+    <div class="register-form">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" [(ngModel)]="registerModel.username" name="username" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" [(ngModel)]="registerModel.email" name="email" required>
+        
+            <label for="password">Password:</label>
+            <input type="current-password" id="password" [(ngModel)]="registerModel.password" name="password" required>
+        
+            <button type="submit" (click)="createNewUser()">Register</button>
+        </form>
+        <p>Already have an account? <a (click)="onClickToLoingPage()">Login</a></p>
+    </div>
+</div>
