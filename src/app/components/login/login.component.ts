@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login/login.service';
-import { LoginModel } from '../../services/login/models/login-model';
+import { LoginRequestModel } from '../../services/login/models/login-model';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,7 @@ import { LoginModel } from '../../services/login/models/login-model';
 export class LoginComponent {
 
   @Input()
-  loginModel: LoginModel = {
+  loginModel: LoginRequestModel = {
     email: '',
     password: ''
   }
@@ -28,7 +28,8 @@ export class LoginComponent {
   loginUser() {
     this.service.loginUser(this.loginModel)
     .subscribe({
-      next: () => {
+      next: (resposne) => {
+        localStorage.setItem("connectedUser", JSON.stringify(resposne.email)) //Not recommend for production
         this.router.navigate(['create-room']);
       }
     });

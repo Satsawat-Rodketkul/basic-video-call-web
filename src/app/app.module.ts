@@ -5,16 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { CreateRoomComponent } from './componenets/create-room/create-room.component';
-import { LoginComponent } from './componenets/login/login.component';
-import { RegisterComponent } from './componenets/register/register.component';
+import { CreateRoomComponent } from './components/create-room/create-room.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ZegocloudMeetingComponent } from './components/zegocloud-meeting/zegocloud-meeting.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    CreateRoomComponent
+    CreateRoomComponent,
+    ZegocloudMeetingComponent
   ],
   imports: [
     BrowserModule,

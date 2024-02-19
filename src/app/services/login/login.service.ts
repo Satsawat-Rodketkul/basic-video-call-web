@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LoginModel } from './models/login-model';
 import { AppConstants } from '../../constants/constants';
+import { LoginRequestModel, LoginResposneModel } from './models/login-model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +12,9 @@ export class LoginService {
     private http: HttpClient
   ) { }
 
-  loginUser(loginModel: LoginModel) {
-    const registerUrl = `${AppConstants.API_BASE_URL}login`;
-    return this.http.post<any>(registerUrl, loginModel);
+  loginUser(loginModel: LoginRequestModel) {
+    const loginUrl = `${AppConstants.API_BASE_URL}login`;
+    return this.http.post<LoginResposneModel>(loginUrl, loginModel);
   }
 
 }

@@ -1,0 +1,81 @@
+.create-room-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-container,
+.new-meeting {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    flex: 1;
+    max-width: 750px;
+    margin-right: 20px;
+    height: fit-content;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.new-meeting {
+    margin-bottom: 20px;
+
+    button {
+        padding: 10px 20px;
+        background-color: #8A2BE2;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        width: 100%;
+    }
+}
+
+.join-meeting {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    input {
+        flex: 1;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        margin-left: 10px;
+        padding: 8px 16px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+}
+
+#logoutBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}

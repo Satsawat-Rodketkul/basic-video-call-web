@@ -23,11 +23,11 @@ export function getUrlParams(
 }
 
 @Component({
-  selector: 'app-create-room',
-  templateUrl: './create-room.component.html',
-  styleUrl: './create-room.component.scss'
+  selector: 'app-zegocloud-meeting',
+  templateUrl: './zegocloud-meeting.component.html',
+  styleUrl: './zegocloud-meeting.component.scss'
 })
-export class CreateRoomComponent {
+export class ZegocloudMeetingComponent {
 
   @ViewChild('root')
   root!: ElementRef;
