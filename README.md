@@ -1,27 +1,25 @@
-# BasicVideoCallWeb
+# Basic-Video-Call-Web with zegocloud
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+This project is a basic video-call web created by Angular and Java Spring boot.
 
-## Development server
+## How to start
+1. Create database in docker following this step [**PostgreSQL in docker**].
+2. Create table user_video_call with
+```
+CREATE TABLE public.user_video_call (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR (100) UNIQUE NOT NULL, 
+    password VARCHAR (100) NOT NULL, 
+    email VARCHAR (100) UNIQUE NOT NULL, 
+    status VARCHAR (20) UNIQUE NOT NULL, 
+    created_date TIMESTAMP NOT NULL
+);
+```
+3. Start API project [https://github.com/Satsawat-Rodketkul/basic-video-call-api].
+4. Start this project with ```ng serve```.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Reference
+**Angular:** `https://www.youtube.com/watch?v=VTEDh2pNSBQ` \
+**Spring Boot & Web:** `https://www.youtube.com/watch?v=k9WSsYA7-yY` \
+**PostgreSQL in docker:** `https://www.commandprompt.com/education/how-to-create-a-postgresql-database-in-docker/` \
+**Zegocloud:** `https://www.zegocloud.com/`
